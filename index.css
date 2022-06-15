@@ -1,0 +1,138 @@
+body {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: grid;
+    background-color: #130F26;
+    grid-template-columns: 60% 40%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -----Section One---- */
+
+.sectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    font-weight: normal;
+}
+
+/* #blurredBackground {
+    background: #6AB972;
+    filter: blur(70px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: 1;
+} */
+
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    width: 50vw;
+    border-radius: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.drop-zone--over {
+    border-style: dotted;
+}
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone__thumb {
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: aquamarine;
+    background-size: cover;
+    position: relative;
+}
+
+.drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    background-color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.uploadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #569B51;
+    border-radius: 5px;
+    width: 50vw;
+    height: 8vh;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+/* -----Section Two----- */
+
+.sectionTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.sectionText {
+    width: 60%;
+}
+
+#welcome {
+    text-align: center;
+    font-size: 2vw;
+    font-weight:normal
+}
+
+#welcomeSub {
+    font-size: 1vw;
+}
+
+hr.line {
+    border-top: 1px solid white;
+    width: 60%;
+}
+
+.loginButton {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 6vh;
+    width: 60%;
+    background: #130F26;
+    color: inherit;
+	border: none;
+	padding: 2vh;
+	cursor: pointer;
+	outline: inherit;
+    border: 1px solid white;
+}
+
+#googleLogin {
+    font-size: 1vw;
+    margin-left: 5.5vw;
+}   

@@ -53,6 +53,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     background-color: aquamarine;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }

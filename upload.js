@@ -2,11 +2,13 @@ $(document).ready(function(){
     
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
-    const redirect_uri = "http://localhost/dropZone/home.html" // replace with your redirect_uri;
-    const client_secret = "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"; // replace with your client secret
+    const redirect_uri = "http://localhost/dropZone/home.html";
+    const client_secret = "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";
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
-    var client_id = "394426612038-21hc3j9lr4l6rjfqlkvvkskd3naa9g1f.apps.googleusercontent.com"// replace it with your client id;
+    var client_id = "394426612038-21hc3j9lr4l6rjfqlkvvkskd3naa9g1f.apps.googleusercontent.com";
+    
+    
     
     $.ajax({
         type: 'POST',
@@ -14,16 +16,17 @@ $(document).ready(function(){
         data: {code:code
             ,redirect_uri:redirect_uri,
             client_secret:client_secret,
-        client_id:client_id,
-        scope:scope,
-        grant_type:"authorization_code"},
+            client_id:client_id,
+            scope:scope,
+            grant_type:"authorization_code"
+        },
         dataType: "json",
         success: function(resultData) {
-        localStorage.setItem("accessToken",resultData.access_token);
-        localStorage.setItem("refreshToken",resultData.refreshToken);
-        localStorage.setItem("expires_in",resultData.expires_in);
-        window.history.pushState({}, document.title, "/dropZone/" + "home.html");
-    }
+            localStorage.setItem("accessToken",resultData.access_token);
+            localStorage.setItem("refreshToken",resultData.refreshToken);
+            localStorage.setItem("expires_in",resultData.expires_in);
+            window.history.pushState({}, document.title, "/dropZone/" + "home.html");
+        },
 });
 
     function stripQueryStringAndHashFromPath(url) {
@@ -45,6 +48,7 @@ $(document).ready(function(){
     Upload.prototype.getName = function() {
         return this.file.name;
     };
+
     Upload.prototype.doUpload = function () {
         var that = this;
         var formData = new FormData();
@@ -70,10 +74,12 @@ $(document).ready(function(){
                 return myXhr;
             },
             success: function (data) {
-                console.log(data);
+                //console.log(data);
+                swal('Hurray!','You have succesfully uploaded the item', 'success');
             },
             error: function (error) {
                 console.log(error);
+                swal("Ups!", "Log in with you Google account to upload files", "error");
             },
             async: true,
             data: formData,
@@ -83,6 +89,7 @@ $(document).ready(function(){
             timeout: 60000
         });
     };
+
     
     Upload.prototype.progressHandling = function (event) {
         var percent = 0;
@@ -102,7 +109,5 @@ $(document).ready(function(){
         var upload = new Upload(file);
 
         upload.doUpload();
-
-        return alert('You have succesfully uploaded the item!')
     });
 });

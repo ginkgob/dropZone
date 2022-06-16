@@ -79,7 +79,7 @@ $(document).ready(function(){
             },
             error: function (error) {
                 console.log(error);
-                swal("Ups!", "Log in with you Google account to upload files", "error");
+                swal("Oops!", "Log in with your Google account to upload your files", "error");
             },
             async: true,
             data: formData,

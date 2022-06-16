@@ -74,11 +74,9 @@ $(document).ready(function(){
                 return myXhr;
             },
             success: function (data) {
-                //console.log(data);
                 swal('Hurray!','You have succesfully uploaded the item', 'success');
             },
             error: function (error) {
-                console.log(error);
                 swal("Oops!", "Log in with your Google account to upload your files", "error");
             },
             async: true,
@@ -104,7 +102,6 @@ $(document).ready(function(){
     };
 
     $(".uploadButton").on("click", function (e) {
-        //console.log(e);
         var file = $(".drop-zone__input")[0].files[0];
         var upload = new Upload(file);
 

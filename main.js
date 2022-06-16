@@ -1,7 +1,7 @@
 document.querySelectorAll(".drop-zone__input").forEach(inputElement => {
     const dropZoneElement = inputElement.closest(".drop-zone");
 
-    dropZoneElement.addEventListener("click", e=> {
+    dropZoneElement.addEventListener("click", e => {
         inputElement.click();
     });
 
@@ -24,6 +24,7 @@ document.querySelectorAll(".drop-zone__input").forEach(inputElement => {
 
     dropZoneElement.addEventListener("drop", e => {
         e.preventDefault();
+        console.log(e);
 
         if (e.dataTransfer.files.length) {
             inputElement.files = e.dataTransfer.files;
@@ -64,4 +65,3 @@ function updateThumbnail(dropZoneElement, file) {
     }
 
 };
-

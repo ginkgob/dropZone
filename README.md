@@ -18,6 +18,8 @@ Just run your Apache server and... that's it!
 
 ## Visuals
 
+![alt text](https://github.com/ginkgob/dropzone/blob/main/img/dropZoneREADM.png?raw=true)
+
 ## Developer
 
  - Àlex Vidal Romera

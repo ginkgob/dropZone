@@ -14,7 +14,7 @@ body {
 
 .loginSection {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     height: 50vh;
@@ -26,16 +26,20 @@ body {
 #title {
     font-size: 5vh;
     font-weight: 400;
+    text-align: center;
 }
 
 .loginForm {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: center;
+    gap: 15px;
 }
 
 #loginAnchor {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: inherit;
 	border: none;
 	cursor: pointer;
@@ -44,8 +48,8 @@ body {
     background: white;
     color: black;
     border-radius: 5px;
-    margin-top: 5vh;
-    height: 3vh;
+    height: 4vh;
+    width: 10vw;
     font-size: small;
 }
 
@@ -53,4 +57,10 @@ input {
     border-radius: 5px;
     width: 15vw;
     height: 3vh;
+}
+
+@media (min-device-width: 800px) { 
+    .loginSection {
+        width: 80vw;
+    }
 }

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var clientId = "394426612038-21hc3j9lr4l6rjfqlkvvkskd3naa9g1f.apps.googleusercontent.com";
-    var redirect_uri = "https://ginkgob.github.io/dropzone/home.html";
+    var redirect_uri = "http://localhost/dropZone/home.html";
     var scope = "https://www.googleapis.com/auth/drive";
     var url = "";
 

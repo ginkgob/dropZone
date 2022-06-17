@@ -102,7 +102,7 @@ $(document).ready(function(){
     };
 
     $(".uploadButton").on("click", function (e) {
-        var file = $(".drop-zone__input")[0].files[0];
+        var file = $(".dropInput")[0].files[0];
         var upload = new Upload(file);
 
         upload.doUpload();

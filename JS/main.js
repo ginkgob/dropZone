@@ -1,5 +1,5 @@
-document.querySelectorAll(".drop-zone__input").forEach(inputElement => {
-    const dropZoneElement = inputElement.closest(".drop-zone");
+document.querySelectorAll(".dropInput").forEach(inputElement => {
+    const dropZoneElement = inputElement.closest(".dropZone");
 
     dropZoneElement.addEventListener("click", e => {
         inputElement.click();
@@ -13,12 +13,12 @@ document.querySelectorAll(".drop-zone__input").forEach(inputElement => {
 
     dropZoneElement.addEventListener("dragover", e => {
         e.preventDefault();
-        dropZoneElement.classList.add("drop-zone--over")
+        dropZoneElement.classList.add("dropOver")
     });
 
     ["dragleave", "dragend"].forEach(type=> {
         dropZoneElement.addEventListener(type, e=> {
-            dropZoneElement.classList.remove("drop-zone--over")
+            dropZoneElement.classList.remove("dropOver")
         });
     });
 
@@ -30,21 +30,21 @@ document.querySelectorAll(".drop-zone__input").forEach(inputElement => {
             updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
         }
 
-        dropZoneElement.classList.remove("drop-zone--over");
+        dropZoneElement.classList.remove("dropOver");
 
     });
 });
 
 function updateThumbnail(dropZoneElement, file) {
-    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+    let thumbnailElement = dropZoneElement.querySelector(".dropThumbnail");
 
-    if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-        dropZoneElement.querySelector(".drop-zone__prompt").remove();
+    if (dropZoneElement.querySelector(".dropPrompt")) {
+        dropZoneElement.querySelector(".dropPrompt").remove();
     } 
     
     if(!thumbnailElement) {
         thumbnailElement = document.createElement("div");
-        thumbnailElement.classList.add("drop-zone__thumb");
+        thumbnailElement.classList.add("dropThumbnail");
         dropZoneElement.appendChild(thumbnailElement);
     }
 

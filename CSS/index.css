@@ -18,6 +18,75 @@ body {
     flex-direction: column;
     align-items: center;
     height: 50vh;
+    width: 250px;
+    background-color: #569b51cb;
+    border-radius: 10px;
+}
+
+#title {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#loginAnchor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    text-decoration: inherit;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    height: 4vh;
+    width: 140px;
+    font-size: small;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 175px;
+    height: 3vh;
+}
+
+
+/* ---------------------------------------------------Media Queries DESKTOP------------------------------------------------ */
+
+
+@media only screen and (min-width: 1200px) {
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #130F26;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginSection {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
     width: 20vw;
     background-color: #569b51cb;
     border-radius: 10px;
@@ -59,8 +128,4 @@ input {
     height: 3vh;
 }
 
-@media (min-device-width: 800px) { 
-    .loginSection {
-        width: 80vw;
-    }
 }

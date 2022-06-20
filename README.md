@@ -2,7 +2,7 @@
 
 > A Drag & Drop web App for uploading files to your Google Drive
 
-Click here to test it! :point_right: https://ginkgob.github.io/dropzone/
+Click here to test it! :point_right: [https://ginkgob.github.io/dropzone/](https://ginkgob.github.io/dropZone/)
 
 ## Background
 
